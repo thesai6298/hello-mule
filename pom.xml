@@ -50,7 +50,7 @@
 				                      <vCores>0.1</vCores>
 				                      <provider>MC</provider>
 				                       <target>Cloudhub-US-East-2</target>
-						<objectStoreV2>true</objectStoreV2>
+						
 						<properties><http.port>8081</http.port>
 						
 						</properties>
