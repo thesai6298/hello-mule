@@ -41,7 +41,7 @@
 				<configuration>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.8.0</muleVersion>
+						<muleVersion>4.9.0</muleVersion>
 						<username>thesai6298</username>
 						<password>Eskrishna@1</password>
 						<applicationName>dev-hello-mule</applicationName>
