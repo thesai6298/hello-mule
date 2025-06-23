@@ -15,7 +15,16 @@
 
 		<app.runtime>4.9.0</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<anypoint.platform.organization.id>1b6576bd-1b92-4746-9633-1ca5c20c9c43</anypoint.platform.organization.id>
 	</properties>
+	<distributionManagement>
+        <repository>
+            <id>anypoint-exchange-v3</id> 
+            <name>Anypoint Exchange</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${anypoint.platform.organization.id}/maven</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 
 	<build>
 		<plugins>
@@ -30,20 +39,22 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
+					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.8.0</muleVersion>
-						<username>sai_dsu</username>
+						<username>thesai6298</username>
 						<password>Eskrishna@1</password>
 						<applicationName>dev-hello-mule</applicationName>
 						<environment>Sandbox</environment>
-						<workers>1</workers>
-						<workerType>MICRO</workerType>
+						<replicas>1</replicas>
+                      <vCores>0.1</vCores>
+<provi                 <provider>MC</provider>
+                       <target>Cloudhub-US-East-2</target>
 						<objectStoreV2>true</objectStoreV2>
 						<properties><http.port>8081</http.port>
 						
 						</properties>
-					</cloudHubDeployment>
+					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -60,6 +71,12 @@
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.5</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.connectors</groupId>
+			<artifactId>mule-file-connector</artifactId>
+			<version>1.5.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
