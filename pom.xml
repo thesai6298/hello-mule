@@ -47,9 +47,9 @@
 						<applicationName>dev-hello-mule</applicationName>
 						<environment>Sandbox</environment>
 						<replicas>1</replicas>
-                      <vCores>0.1</vCores>
-<provi                 <provider>MC</provider>
-                       <target>Cloudhub-US-East-2</target>
+				                      <vCores>0.1</vCores>
+				                      <provider>MC</provider>
+				                       <target>Cloudhub-US-East-2</target>
 						<objectStoreV2>true</objectStoreV2>
 						<properties><http.port>8081</http.port>
 						
